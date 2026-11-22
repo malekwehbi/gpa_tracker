@@ -1,3 +1,5 @@
+import 'final_exam_page.dart';
+
 import 'package:flutter/material.dart';
 
 import 'course.dart';
@@ -785,7 +787,14 @@ class _GPADashboardState extends State<GPADashboard> {
                         const SizedBox(height: 14),
 
                         OutlinedButton.icon(
-                          onPressed: showFinalExamPlanner,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const FinalExamPage(),
+                              ),
+                            );
+                          },
                           icon: const Icon(Icons.calculate_outlined),
                           label: const Text(
                             'Final Exam Planner',
